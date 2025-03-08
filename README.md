@@ -1,63 +1,76 @@
-# HiveSocial - A Social Media Platform for Hive Blockchain
+# HiveSocial - A Hive Blockchain Social Media Application
 
-This is a social media platform built on top of the Hive blockchain. It allows users to:
-- Read posts from the Hive blockchain
-- Create and publish posts
-- Login using Hive Keychain or HiveSigner
-- View user profiles and their posts
-- Interact with posts (coming soon)
+A modern social media application built on the Hive blockchain, allowing users to create posts, comment, vote, and interact with the Hive ecosystem.
 
 ## Features
 
-- Integration with Hive blockchain
-- Authentication using Hive Keychain and HiveSigner
-- Create and publish posts
-- View trending posts
-- User profiles
-- Responsive design with Tailwind CSS
+- **Authentication**: Login with Hive Keychain or direct private key
+- **Content Creation**: Create and publish posts to the Hive blockchain
+- **Social Interactions**: Vote on posts, comment, and view user profiles
+- **Media Support**: Upload and embed images in posts
+- **Responsive Design**: Works on desktop and mobile devices
 
-## Prerequisites
+## Technologies Used
 
-Before running this application, make sure you have:
-- Node.js (v14 or higher)
-- npm (v6 or higher)
-- A Hive account
-- Hive Keychain browser extension (recommended) or HiveSigner account
+- **Frontend**: React, React Router, Tailwind CSS
+- **Blockchain**: Hive Blockchain, dhive library
+- **Authentication**: Hive Keychain, direct key signing
+- **State Management**: React Context API
+- **Styling**: Tailwind CSS for responsive design
 
 ## Installation
 
 1. Clone the repository:
-```bash
-git clone <repository-url>
-cd hivesocial
-```
+   ```bash
+   git clone https://github.com/yourusername/hive-social-app.git
+   cd hive-social-app
+   ```
 
 2. Install dependencies:
-```bash
-cd client
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-3. Create a `.env` file in the client directory and add your HiveSigner credentials (if using HiveSigner):
-```
-REACT_APP_HIVESIGNER_CLIENT_ID=your-client-id
-REACT_APP_HIVESIGNER_REDIRECT_URI=http://localhost:3000/auth
-```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-4. Start the development server:
-```bash
-npm start
-```
-
-The application will be available at `http://localhost:3000`.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Usage
 
-1. Install the Hive Keychain browser extension (recommended) or create a HiveSigner account
-2. Login to the application using your Hive credentials
-3. Browse trending posts on the home page
-4. Create new posts using the "Create Post" button
-5. View user profiles and their posts
+### Authentication
+
+- **Hive Keychain**: Install the [Hive Keychain browser extension](https://chrome.google.com/webstore/detail/hive-keychain/jcacnejopjdphbnjgfaaobbfafkihpep) for the most secure experience
+- **Direct Key**: You can also use your private posting key directly (less secure but doesn't require extensions)
+
+### Creating Posts
+
+1. Click "Create Post" in the navigation bar
+2. Enter a title, content, and tags
+3. Optionally upload images
+4. Click "Publish Post" or "Simple Post" to publish to the Hive blockchain
+
+### Interacting with Content
+
+- **Voting**: Click the upvote button on posts
+- **Commenting**: Add comments to posts
+- **Profiles**: View user profiles by clicking on usernames
+
+## Project Structure
+
+```
+client/
+├── public/             # Static files
+├── src/
+│   ├── components/     # React components
+│   ├── utils/          # Utility functions
+│   ├── hooks/          # Custom React hooks
+│   ├── App.js          # Main application component
+│   └── index.js        # Application entry point
+└── package.json        # Dependencies and scripts
+```
 
 ## Contributing
 
@@ -69,8 +82,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-- Hive Blockchain
-- Hive Keychain
-- HiveSigner
-- React.js
-- Tailwind CSS 
+- [Hive Blockchain](https://hive.io/) for the decentralized content platform
+- [dhive](https://github.com/openhive-network/dhive) for the JavaScript Hive client
+- [Hive Keychain](https://github.com/hive-keychain/hive-keychain-extension) for secure authentication 
